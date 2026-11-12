@@ -1,0 +1,6 @@
+{
+  "name": "Tic Tac Toe Pro",
+  "description": "A sleek, modern, tournament-ready Tic Tac Toe app featuring intelligent AI, 2-player pass-and-play, tactical 4x4 mode, custom themes, move hints, and arcade sound effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
