@@ -68,11 +68,11 @@ export const GameBoard: React.FC<GameBoardProps> = ({
 
   return (
     <div className="relative w-full max-w-sm sm:max-w-md mx-auto aspect-square p-2 select-none">
-      {/* Outer ambient glow */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-indigo-500/5 to-rose-500/10 rounded-3xl blur-2xl pointer-events-none" />
+      {/* Outer ambient glow tuned for #212121 */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/15 via-blue-500/5 to-rose-500/15 rounded-3xl blur-2xl pointer-events-none" />
 
-      {/* Glass card container */}
-      <div className="relative w-full h-full bg-slate-900/90 rounded-3xl p-3 sm:p-3.5 border border-slate-800 shadow-2xl backdrop-blur-xl flex flex-col justify-center">
+      {/* Game board housing container in #282828 */}
+      <div className="relative w-full h-full bg-[#272727] rounded-3xl p-3 sm:p-3.5 border border-[#383838] shadow-2xl backdrop-blur-xl flex flex-col justify-center">
         {/* Grid Cells */}
         <div
           className="grid w-full h-full gap-2 sm:gap-2.5"
@@ -94,16 +94,16 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                 onMouseLeave={() => setHoveredIndex(null)}
                 disabled={disabled || cell !== null || winInfo !== null}
                 aria-label={`Cell ${index + 1}, ${cell ? `Marked ${cell}` : 'Empty'}`}
-                className={`relative flex items-center justify-center rounded-2xl font-black transition-all duration-150 cursor-pointer overflow-hidden group focus-visible:outline-2 focus-visible:outline-indigo-500 ${
+                className={`relative flex items-center justify-center rounded-2xl font-black transition-all duration-150 cursor-pointer overflow-hidden group focus-visible:outline-2 focus-visible:outline-blue-500 ${
                   isWinningCell
                     ? winInfo?.winner === 'X'
-                      ? 'bg-cyan-950/90 border-2 border-cyan-400 text-cyan-200 shadow-lg shadow-cyan-500/30 scale-[1.02]'
-                      : 'bg-rose-950/90 border-2 border-rose-400 text-rose-200 shadow-lg shadow-rose-500/30 scale-[1.02]'
+                      ? 'bg-[#1a2f38] border-2 border-cyan-400 text-cyan-200 shadow-lg shadow-cyan-500/30 scale-[1.02]'
+                      : 'bg-[#381a24] border-2 border-rose-400 text-rose-200 shadow-lg shadow-rose-500/30 scale-[1.02]'
                     : isHint
-                    ? 'bg-amber-950/40 border-2 border-amber-400/80 shadow-md shadow-amber-500/20 animate-pulse'
+                    ? 'bg-[#382f18] border-2 border-amber-400 shadow-md shadow-amber-500/20 animate-pulse'
                     : cell
-                    ? 'bg-slate-800/80 border border-slate-700/70 text-slate-100 hover:bg-slate-800'
-                    : 'bg-slate-800/40 border border-slate-700/40 hover:bg-slate-800/90 hover:border-slate-600 active:scale-95'
+                    ? 'bg-[#2a2a2a] border border-[#3a3a3a] text-neutral-100 shadow-inner'
+                    : 'bg-[#2f2f2f] border border-[#3d3d3d] hover:bg-[#363636] hover:border-[#4d4d4d] active:scale-95 shadow-sm'
                 }`}
                 style={{
                   fontSize: size === 3 ? 'clamp(2.5rem, 8vw, 3.8rem)' : 'clamp(1.75rem, 6vw, 2.6rem)',
@@ -114,8 +114,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                   <span
                     className={`animate-pop-in ${
                       cell === 'X'
-                        ? `${skin.xColor} drop-shadow-[0_0_12px_rgba(34,211,238,0.4)]`
-                        : `${skin.oColor} drop-shadow-[0_0_12px_rgba(244,63,94,0.4)]`
+                        ? `${skin.xColor} drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]`
+                        : `${skin.oColor} drop-shadow-[0_0_12px_rgba(244,63,94,0.45)]`
                     }`}
                   >
                     {cell === 'X' ? skin.xDisplay : skin.oDisplay}
@@ -132,7 +132,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
 
                 {/* Subtle Numpad Key Hint for Desktop */}
                 {showKeyHints && size === 3 && !cell && !winInfo && (
-                  <span className="absolute bottom-1 right-1.5 text-[9px] font-mono text-slate-600 opacity-40 group-hover:opacity-75 transition-opacity pointer-events-none hidden sm:inline">
+                  <span className="absolute bottom-1 right-1.5 text-[9px] font-mono text-neutral-500 opacity-40 group-hover:opacity-75 transition-opacity pointer-events-none hidden sm:inline">
                     {numpadKeyMap3x3[index]}
                   </span>
                 )}

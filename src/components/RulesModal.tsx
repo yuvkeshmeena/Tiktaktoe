@@ -11,9 +11,9 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-pop-in">
-      <div className="relative w-full max-w-lg bg-slate-900/95 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl">
+      <div className="relative w-full max-w-lg bg-[#252525] border border-[#383838] rounded-3xl p-5 sm:p-6 shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div className="flex items-center justify-between pb-3 border-b border-[#383838]">
           <div className="flex items-center gap-2.5">
             <div className="p-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
               <Trophy className="w-5 h-5" />
@@ -22,22 +22,22 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
               <h3 className="text-base sm:text-lg font-bold text-white font-display">
                 Official Rules & Tactics
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-neutral-400">
                 Tournament guidelines, tactics, and hotkeys
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+            className="p-1 rounded-lg text-neutral-400 hover:text-white hover:bg-[#333333] transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Rules Content */}
-        <div className="my-4 space-y-3.5 text-xs sm:text-sm text-slate-300">
-          <p className="leading-relaxed text-slate-300">
+        <div className="my-4 space-y-3.5 text-xs sm:text-sm text-neutral-300">
+          <p className="leading-relaxed text-neutral-300">
             Form an unbroken linear alignment of markers before your opponent does.
           </p>
 
@@ -61,23 +61,23 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Keyboard Controls Tip for Gamers */}
-          <div className="p-3.5 rounded-2xl bg-indigo-950/40 border border-indigo-500/30">
-            <div className="flex items-center gap-1.5 font-bold text-xs text-indigo-300 mb-1.5">
-              <Keyboard className="w-4 h-4 text-indigo-400" />
+          <div className="p-3.5 rounded-2xl bg-[#2b2b2b] border border-[#3d3d3d]">
+            <div className="flex items-center gap-1.5 font-bold text-xs text-blue-400 mb-1.5">
+              <Keyboard className="w-4 h-4" />
               <span>Rapid Keyboard Input:</span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-neutral-400 leading-relaxed">
               Use your keyboard or Numpad keys (7, 8, 9 for top row; 4, 5, 6 for center; 1, 2, 3 for bottom) for lightning-fast competitive moves without touching the mouse!
             </p>
           </div>
 
           {/* Strategic Pro Tip */}
-          <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <div className="p-3.5 rounded-2xl bg-[#282828] border border-[#383838]">
             <div className="flex items-center gap-1.5 font-bold text-xs text-amber-400 mb-1.5">
               <Award className="w-4 h-4 text-amber-400" />
               <span>Grandmaster Tip:</span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-neutral-400 leading-relaxed">
               In 3×3, claiming the central vertex creates 4 distinct win threats. If opponent takes center, control opposite corners to maintain tactical parity!
             </p>
           </div>
@@ -87,7 +87,7 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
         <div className="pt-2 flex justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-colors cursor-pointer"
+            className="px-5 py-2 text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-colors cursor-pointer border border-blue-400/20"
           >
             Ready to Play
           </button>

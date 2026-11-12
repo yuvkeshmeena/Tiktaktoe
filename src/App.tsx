@@ -498,9 +498,9 @@ export default function App() {
   const canHint = !winner && !isAiThinking && !isSeriesWon;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between selection:bg-indigo-600 selection:text-white relative overflow-x-hidden font-sans">
-      {/* Background ambient lighting */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-indigo-500/10 blur-[130px] pointer-events-none rounded-full" />
+    <div className="min-h-screen bg-[#212121] text-neutral-100 flex flex-col justify-between selection:bg-blue-600 selection:text-white relative overflow-x-hidden font-sans">
+      {/* Background ambient lighting tuned for #212121 */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-500/10 blur-[130px] pointer-events-none rounded-full" />
       <div className="fixed bottom-0 right-0 w-[400px] h-[300px] bg-cyan-500/5 blur-[120px] pointer-events-none rounded-full" />
 
       {/* Top Header */}
@@ -571,15 +571,15 @@ export default function App() {
       </main>
 
       {/* Sleek App Footer */}
-      <footer className="w-full max-w-5xl mx-auto px-4 py-3 border-t border-slate-900/80 text-center text-xs text-slate-500 relative z-10">
+      <footer className="w-full max-w-5xl mx-auto px-4 py-3 border-t border-[#333333] text-center text-xs text-neutral-400 relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>Tic Tac Toe Pro · Professional Grid Gaming Console</span>
-          <div className="flex items-center gap-3 text-[11px] text-slate-400">
-            <span>Press <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono text-white">7-9</kbd> Numpad</span>
+          <div className="flex items-center gap-3 text-[11px] text-neutral-400">
+            <span>Press <kbd className="px-1.5 py-0.5 rounded bg-[#2c2c2c] border border-[#3e3e3e] font-mono text-white">7-9</kbd> Numpad</span>
             <span>·</span>
-            <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono text-white">H</kbd> Hint</span>
+            <span><kbd className="px-1.5 py-0.5 rounded bg-[#2c2c2c] border border-[#3e3e3e] font-mono text-white">H</kbd> Hint</span>
             <span>·</span>
-            <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono text-white">U</kbd> Undo</span>
+            <span><kbd className="px-1.5 py-0.5 rounded bg-[#2c2c2c] border border-[#3e3e3e] font-mono text-white">U</kbd> Undo</span>
           </div>
         </div>
       </footer>

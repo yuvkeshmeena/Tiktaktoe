@@ -19,27 +19,27 @@ export const Header: React.FC<HeaderProps> = ({
   onNewGame,
 }) => {
   return (
-    <header className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-6 border-b border-slate-800/80">
+    <header className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-6 border-b border-[#333333] bg-[#212121]/90 backdrop-blur-md sticky top-0 z-20">
       {/* Zone 1: Single text element wordmark */}
       <div className="flex items-center gap-3">
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center font-black text-white shadow-lg shadow-cyan-500/20 text-sm tracking-tighter">
+        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-black text-white shadow-lg shadow-cyan-500/20 text-sm tracking-tighter shrink-0 border border-cyan-400/30">
           ✕◯
         </div>
         <div>
           <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white whitespace-nowrap block font-display">
             TIC TAC TOE PRO
           </span>
-          <span className="text-[11px] text-slate-400 font-medium hidden sm:block tracking-wide uppercase">
+          <span className="text-[11px] text-neutral-400 font-medium hidden sm:block tracking-wide uppercase">
             Competitive Grid Battle
           </span>
         </div>
       </div>
 
       {/* Zone 2: Nav Links & Modals */}
-      <nav className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-slate-300">
+      <nav className="flex items-center gap-1.5 sm:gap-3 text-xs sm:text-sm font-medium text-neutral-300">
         <button
           onClick={onOpenStats}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-slate-800/80 hover:text-white transition-colors cursor-pointer whitespace-nowrap"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-[#2c2c2c] hover:text-white transition-colors cursor-pointer whitespace-nowrap text-neutral-300"
           title="Match Statistics"
         >
           <BarChart2 className="w-4 h-4 text-cyan-400" />
@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button
           onClick={onOpenSkins}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-slate-800/80 hover:text-white transition-colors cursor-pointer whitespace-nowrap"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-[#2c2c2c] hover:text-white transition-colors cursor-pointer whitespace-nowrap text-neutral-300"
           title="Custom Skins & Markers"
         >
           <Sparkles className="w-4 h-4 text-amber-400" />
@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button
           onClick={onOpenRules}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-slate-800/80 hover:text-white transition-colors cursor-pointer whitespace-nowrap"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-[#2c2c2c] hover:text-white transition-colors cursor-pointer whitespace-nowrap text-neutral-300"
           title="Rules & How to Play"
         >
           <BookOpen className="w-4 h-4 text-indigo-400" />
@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button
           onClick={onToggleSound}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-slate-800/80 hover:text-white transition-colors cursor-pointer whitespace-nowrap"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-[#2c2c2c] hover:text-white transition-colors cursor-pointer whitespace-nowrap text-neutral-300"
           title={isMuted ? 'Unmute Sound' : 'Mute Sound'}
         >
           {isMuted ? (
@@ -82,7 +82,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="shrink-0">
         <button
           onClick={onNewGame}
-          className="px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 active:scale-95 rounded-lg transition-all shadow-md shadow-indigo-600/30 whitespace-nowrap cursor-pointer"
+          className="px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 active:scale-95 rounded-lg transition-all shadow-md shadow-blue-600/25 whitespace-nowrap cursor-pointer border border-blue-400/30"
         >
           New Match
         </button>
